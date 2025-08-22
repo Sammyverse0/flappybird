@@ -11,7 +11,6 @@ public class BirdScript : MonoBehaviour
 
     void Awake()
     {
-        // Initialize input actions
         inputActions = new InputSystem_Actions();
     }
 
@@ -32,10 +31,8 @@ public class BirdScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
-    private void Flap()
-    {
-        if (birdisalive)
-        {
+    private void Flap(){
+        if (birdisalive){
             myrigidbody.linearVelocity = Vector2.up * Flapstrength;
         }
     }
